@@ -497,6 +497,43 @@
       text-transform: uppercase;
     }
 
+
+    .contact-form {
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(26,37,64,0.6);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--white);
+      padding: 16px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      outline: none;
+      transition: border-color 0.3s;
+      resize: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: rgba(201,168,76,0.6);
+      background: rgba(26,37,64,0.9);
+    }
+
     /* SCROLL INDICATOR */
     .scroll-indicator {
       position: absolute;
@@ -527,6 +564,47 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-muted);
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 44px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(26,37,64,0.6);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--white);
+      padding: 16px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      outline: none;
+      transition: border-color 0.3s;
+      resize: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: rgba(201,168,76,0.6);
+      background: rgba(26,37,64,0.9);
     }
   </style>
 </head>
@@ -639,7 +717,18 @@
       <p class="section-label">Contact</p>
       <h2 class="section-title">Get in <em>Touch</em></h2>
       <p class="section-body" style="margin: 0 auto;">For inquiries regarding investment opportunities or partnership discussions, reach out directly.</p>
-      <a href="/cdn-cgi/l/email-protection#9df0fce9e9f5f8eac2f5f2f3fcf6f8efddf6f8f3fcf3b0fbf1fcfaf1f8efb3e8f3feb3f8f9e8" class="contact-email"><span class="__cf_email__" data-cfemail="177a7663637f7260487f7879767c7265577c727976793a717b76707b72653962797439727362">[email&#160;protected]</span></a>
+      <form action="https://formspree.io/f/xojkeoeo" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="border:none;cursor:pointer;width:100%;">Send Message</button>
+      </form>
     </div>
   </section>
 
